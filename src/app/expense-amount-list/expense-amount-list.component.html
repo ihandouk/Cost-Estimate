@@ -1,0 +1,32 @@
+<section class="expense-description-section">
+    <div class="expense-description-container">
+        <div class="expense-column">
+            <h1>Item</h1>
+
+            <div class="expense-item">
+                <div *ngFor="let item of estimateItem">
+                    <app-expense-item 
+                    *ngIf="item.amount >= 0"
+                    [item]="item" 
+                    (xButtonClick)="onDelete(item)"
+                    (itemClick)="onItemClicked(item)"
+                    style="display:block; margin-bottom: 12px"></app-expense-item>
+                </div>
+            </div>
+        </div>
+
+        <div class="amount-column">
+            <h1>Expense</h1>
+            <div class="item-expense">
+                <div *ngFor="let item of estimateItem">
+                    <app-expense-item 
+                    *ngIf="item.amount < 0"
+                    [item]="item" 
+                    (xButtonClick)="onDelete(item)"
+                    (itemClick)="onItemClicked(item)"
+                    style="display:block; margin-bottom: 12px"></app-expense-item>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

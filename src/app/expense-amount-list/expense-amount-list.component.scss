@@ -1,0 +1,56 @@
+@import '../../main-styles.scss';
+
+.expense-description-section{
+    display: flex;
+    padding: 50px;
+
+    justify-content: center;
+    align-items: center;
+
+    .expense-description-container{
+        display: flex;
+        max-width: 700px;
+        height: 100%;
+        width: 100%;
+
+        .expense-column, .amount-column{
+            display: flex;
+            flex-direction: column;
+            flex-basis: 0;
+            flex-grow: 1;
+
+            h1{
+                font-family: 'lato';
+                font-size: 20px;
+                font-weight: 900;
+                text-transform: uppercase;
+            }
+
+            .expense-item{
+                display: flex;
+                flex-direction: column;
+                margin-top: 12px;
+            }
+            .item-expense{
+                display: flex;
+                flex-direction: column;
+                margin-top: 12px;
+            }
+        }
+
+        .expense-column{
+            margin-right: 35px;
+
+            h1{
+                color: $blue-dark;
+            }
+        }
+        .amount-column{
+            margin-right: 35px;
+
+            h1{
+                color: $blue-light;
+            }
+        }
+    }
+}
