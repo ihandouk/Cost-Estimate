@@ -1,10 +1,10 @@
 <div class="root">
-    <div class="expense-item" (click)="onItemClick()" [ngClass]="{'item': item.amount >= 0, 'expense': item.amount < 0}">
+    <div class="expense-item" (click)="onItemClick()" [ngClass]="{'item': item.amount >= 0}">
         <div class="expense-description">
             <p>{{ item.description }}</p>
         </div>
         <div class="expense-amount">
-            {{item.amount}}
+            {{ item.amount | currency }}
         </div>
     </div>
 
