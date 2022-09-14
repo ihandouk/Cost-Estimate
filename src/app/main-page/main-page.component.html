@@ -2,18 +2,40 @@
     <h1>Cost Estimator</h1>
 </div>
 
-<section class="add-expense-section">
-    <div class="add-expense-container">
-        <app-add-expense-form style="padding: 20px" (formSubmit)="addItem($event)"></app-add-expense-form>
-    </div>
-</section>
+<mat-tab-group [selectedIndex]="selected.value"
+                (selectedIndexChange)="selected.setValue($event)">
+    <mat-tab *ngFor="let tab of tabs; let index = index" [label]="tab">
+    
+        <button mat-raised-button
+            class="example-delete-tab-button"
+            [disabled]="tabs.length === 1"
+            (click)="removeTab(index)">
+            Delete Tab
+        </button>
 
-<hr style="margin-top: 0;">
+        <button mat-raised-button
+            class="example-add-tab-button"
+            (click)="addTab(tab)">
+            Add new tab
+        </button>
+        
+        <section class="add-expense-section">
+            <div class="add-expense-container">
+                <app-add-expense-form style="padding: 20px" (formSubmit)="addItem($event)"></app-add-expense-form>
+            </div>
+        </section>
+        
+        <hr style="margin-top: 0;">
+        
+        <app-expense-amount-list [estimateItem]="estimateItem" (delete)="deleteItem($event)"></app-expense-amount-list>
+        
+        <hr style="margin-top: 0;">
+        
+        <div class="total-estimate">
+            <h2 class="green">{{ totalEstimate | currency }}</h2>
+        </div>
+    
+    </mat-tab>
+</mat-tab-group>
 
-<app-expense-amount-list [estimateItem]="estimateItem" (delete)="deleteItem($event)"></app-expense-amount-list>
 
-<hr style="margin-top: 0;">
-
-<div class="total-estimate">
-    <h2 class="green">{{ totalEstimate | currency }}</h2>
-</div>

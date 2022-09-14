@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -12,6 +12,10 @@ import { ExpenseItemComponent } from './expense-amount-list/expense-item/expense
 import { EditExpenseComponent } from './edit-expense/edit-expense.component';
 
 import {MatDialogModule} from '@angular/material/dialog';
+import { MatTabsModule } from '@angular/material/tabs';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -27,7 +31,12 @@ import {MatDialogModule} from '@angular/material/dialog';
     AppRoutingModule,
     FormsModule,
     BrowserAnimationsModule,
-    MatDialogModule
+    MatDialogModule,
+    ReactiveFormsModule,
+    MatTabsModule,
+    MatFormFieldModule,
+    MatCheckboxModule,
+    MatIconModule
   ],
   providers: [],
   entryComponents: [EditExpenseComponent],

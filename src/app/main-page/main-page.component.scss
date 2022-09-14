@@ -18,6 +18,19 @@
     }
 }
 
+.example-input-label,
+.example-add-tab-button,
+.example-delete-tab-button {
+  margin: 8px;
+  background-color: #8A4D76;
+    border-color: transparent;
+    color: #fff
+}
+
+.example-tab-icon {
+    margin-right: 8px;
+  }
+
 .total-estimate{
     display: flex;
     height: 150px;
