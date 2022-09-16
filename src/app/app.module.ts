@@ -10,12 +10,14 @@ import { AddExpenseFormComponent } from './add-expense-form/add-expense-form.com
 import { ExpenseAmountListComponent } from './expense-amount-list/expense-amount-list.component';
 import { ExpenseItemComponent } from './expense-amount-list/expense-item/expense-item.component';
 import { EditExpenseComponent } from './edit-expense/edit-expense.component';
-
+import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatDialogModule} from '@angular/material/dialog';
 import { MatTabsModule } from '@angular/material/tabs';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
+
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import {MatIconModule} from '@angular/material/icon';
     MatTabsModule,
     MatFormFieldModule,
     MatCheckboxModule,
-    MatIconModule
+    MatIconModule,
+    MatToolbarModule,
+    MatButtonModule
   ],
   providers: [],
   entryComponents: [EditExpenseComponent],

@@ -8,6 +8,7 @@ import { EstimatorItem } from 'src/Shared/models/item-estimator.model';
 })
 export class ExpenseItemComponent implements OnInit {
 
+  
   @Input() item: EstimatorItem;
   @Output() xButtonClick: EventEmitter<any> = new EventEmitter<any>();
   @Output() itemClick: EventEmitter<any> = new EventEmitter<any>();

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
 import { EstimatorItem } from 'src/Shared/models/item-estimator.model';
 import { FormControl } from '@angular/forms';
 
@@ -9,7 +9,7 @@ import { FormControl } from '@angular/forms';
 })
 export class MainPageComponent implements OnInit {
 
-  tabs = ['First', 'Second', 'Third'];
+  tabs = ['Estimate'];
   selected = new FormControl(0);
 
   estimateItem: EstimatorItem[] = new Array<EstimatorItem>();
@@ -31,7 +31,7 @@ export class MainPageComponent implements OnInit {
   }
 
   addTab(tabs) {
-    this.tabs.push('New');
+    this.tabs.push(tabs);
   }
 
   removeTab(index: number) {
