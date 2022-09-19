@@ -1,45 +1,5 @@
-@import '../../main-styles.scss';
-
 .example-spacer {
     flex: 1 1 auto;
-  }
-
-
-.add-expense-section{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    .add-expense-container{
-        width: 700px;
-        
-    }
-}
-
-.example-container {
-
-    height: 150px;
-    width: 400px;
-    margin: 0 auto;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: nowrap;
-    background-color: rgb(35, 21, 97);
-    display: flex;
-    left:0;
-    right:0;
-
-    h2{
-        font-family: 'lato';
-        font-weight: 300;
-        font-size: 60px;
-        color: aliceblue;
-
-        &.green{
-            color: lighten($green, 10%);
-        }
-    }
   }
 
 

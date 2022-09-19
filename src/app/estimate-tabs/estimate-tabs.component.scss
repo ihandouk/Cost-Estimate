@@ -1,0 +1,53 @@
+@import '../../main-styles.scss';
+
+.add-expense-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .add-expense-container{
+        width: 700px;
+        
+    }
+}
+
+.close{
+    opacity: 1;
+    min-width: 1vw !important;
+    border-radius: 1vw !important;
+}
+
+.example-container {
+
+    height: 150px;
+    width: 400px;
+    margin: 0 auto;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    background-color: rgb(35, 21, 97);
+    display: flex;
+    left:0;
+    right:0;
+
+    h2{
+        font-family: 'lato';
+        font-weight: 300;
+        font-size: 60px;
+        color: aliceblue;
+
+        &.green{
+            color: lighten($green, 10%);
+        }
+    }
+  }
+  .add-tab-button{
+    float: right;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  .estimator-model{
+    margin-top: 60px;
+  }
